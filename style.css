@@ -2,33 +2,28 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family:"Noto Sans JP",sans-serif; }
 body { line-height:1.6; transition: background 0.3s, color 0.3s; }
 
-/* ダークモード初期 */
+/* ライトモード初期 */
+body.light { background:#fdfdfd; color:#222; }
 body.dark { background:#1b1b1b; color:#f0f0f0; }
-body.light { background:#f0f0f0; color:#1b1b1b; }
 
 header { text-align:center; padding:50px 20px; transition: background 0.3s, color 0.3s; }
+header.light { background:#fff; color:#222; }
 header.dark { background:#4b00ff; color:#fff; }
-header.light { background:#8a63ff; color:#000; }
 
 header h1 { font-size:3em; margin-bottom:10px; }
-header p { font-size:1.2em; margin-bottom:20px; }
+header p { font-size:1.2em; margin-bottom:20px; color:inherit; }
 .controls { margin-top:10px; }
-.controls button { margin:0 5px; padding:8px 15px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; }
+.controls button { margin:0 5px; padding:8px 15px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; background:#eee; color:#222; }
+body.dark .controls button { background:#333; color:#fff; }
 
-nav { background:#2c2c2c; transition: background 0.3s; }
-nav.light { background:#ddd; }
-nav ul { display:flex; justify-content:center; list-style:none; }
-nav ul li { margin:0 15px; }
-nav ul li a { color:#fff; text-decoration:none; padding:10px; }
-nav.light ul li a { color:#000; }
-nav ul li a:hover { color:#4b00ff; }
-
-main { max-width:900px; margin:40px auto; padding:0 20px; }
+main { max-width:800px; margin:40px auto; padding:0 20px; }
 section { margin-bottom:50px; }
 section h2 { font-size:2em; margin-bottom:15px; border-bottom:2px solid #4b00ff; display:inline-block; padding-bottom:5px; }
-section ul { list-style:disc inside; }
+ul { list-style:disc inside; padding-left:0; }
 .btn { display:inline-block; background:#4b00ff; color:#fff; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s; }
 .btn:hover { background:#6a33ff; }
-footer { text-align:center; padding:20px; transition: background 0.3s, color 0.3s; }
+
+footer { text-align:center; padding:20px; background:#fafafa; color:#555; }
+body.dark footer { background:#222; color:#aaa; }
 footer a { color:#4b00ff; text-decoration:none; }
 footer a:hover { text-decoration:underline; }
