@@ -1,53 +1,29 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Fly - Minecraft Plugin</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1 id="title">Premium Fly</h1>
-    <p id="subtitle">サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン</p>
-    <div class="controls">
-      <button id="toggle-theme">🌙 ダーク/ライト</button>
-      <button id="toggle-lang">EN/JP</button>
-    </div>
-  </header>
+/* リセット */
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Noto Sans JP",sans-serif; }
+body { line-height:1.6; transition: background 0.3s, color 0.3s; }
 
-  <main>
-    <!-- ダウンロード -->
-    <section id="download">
-      <h2 id="download-title">ダウンロード</h2>
-      <p id="download-version">最新版: <strong>1.0-SNAPSHOT</strong></p>
-      <a href="downloads/PremiumFly-1.0.jar" class="btn" download id="download-btn">ダウンロード</a>
-    </section>
+/* ライトモード初期 */
+body.light { background:#fdfdfd; color:#222; }
+body.dark { background:#1b1b1b; color:#f0f0f0; }
 
-    <!-- 機能紹介 -->
-    <section id="features">
-      <h2 id="features-title">機能</h2>
-      <ul id="features-list">
-        <li>/pfly @player enable/disable で飛行権限を管理</li>
-        <li>特定のタグを持つプレイヤーのみ使用可能</li>
-        <li>サバイバル・アドベンチャーでも飛行可能</li>
-        <li>軽量・サーバーに負荷が少ない</li>
-      </ul>
-    </section>
+header { text-align:center; padding:50px 20px; transition: background 0.3s, color 0.3s; }
+header.light { background:#fff; color:#222; }
+header.dark { background:#4b00ff; color:#fff; }
 
-    <!-- 更新情報 -->
-    <section id="changelog">
-      <h2 id="changelog-title">更新情報</h2>
-      <ul id="changelog-list">
-        <li><strong>1.0-SNAPSHOT:</strong> 初回リリース、基本機能実装</li>
-      </ul>
-    </section>
-  </main>
+header h1 { font-size:3em; margin-bottom:10px; }
+header p { font-size:1.2em; margin-bottom:20px; color:inherit; }
+.controls { margin-top:10px; }
+.controls button { margin:0 5px; padding:8px 15px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; background:#eee; color:#222; }
+body.dark .controls button { background:#333; color:#fff; }
 
-  <footer>
-    <p>© 2026 Takkunlego0916 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub</a></p>
-  </footer>
+main { max-width:800px; margin:40px auto; padding:0 20px; }
+section { margin-bottom:50px; }
+section h2 { font-size:2em; margin-bottom:15px; border-bottom:2px solid #4b00ff; display:inline-block; padding-bottom:5px; }
+ul { list-style:disc inside; padding-left:0; }
+.btn { display:inline-block; background:#4b00ff; color:#fff; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s; }
+.btn:hover { background:#6a33ff; }
 
-  <script src="scripts.js"></script>
-</body>
-</html>
+footer { text-align:center; padding:20px; background:#fafafa; color:#555; }
+body.dark footer { background:#222; color:#aaa; }
+footer a { color:#4b00ff; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
