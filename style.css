@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.plugin-list {
+  display: flex;
+  gap: 20px;
+}
+
+.plugin-card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
