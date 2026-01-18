@@ -6,12 +6,13 @@
   <title>Premium Fly - Minecraft Plugin</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
+<body class="light">
+  <!-- ヘッダー -->
+  <header class="light">
     <h1 id="title">Premium Fly</h1>
     <p id="subtitle">サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン</p>
     <div class="controls">
-      <button id="toggle-theme">ダーク/ライト</button>
+      <button id="toggle-theme">🌙 ダーク/ライト</button>
       <select id="select-lang">
         <option value="jp">日本語</option>
         <option value="en">English</option>
@@ -22,12 +23,13 @@
     </div>
   </header>
 
+  <!-- メイン -->
   <main>
     <!-- ダウンロード -->
     <section id="download">
       <h2 id="download-title">ダウンロード</h2>
       <p id="download-version">最新版: <strong>1.0-SNAPSHOT</strong></p>
-      <a href="downloads/PremiumFly-1.0-SNAPSHOT.jar" class="btn" download id="download-btn">ダウンロード</a>
+      <a href="downloads/PremiumFly-1.0.jar" class="btn" download id="download-btn">ダウンロード</a>
     </section>
 
     <!-- 機能紹介 -->
@@ -50,10 +52,12 @@
     </section>
   </main>
 
+  <!-- フッター -->
   <footer>
-    <p>© 2026 金田匠 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub</a></p>
+    <p>© 2026 Takkunlego0916 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub</a></p>
   </footer>
 
+  <!-- スクリプトはbody閉じタグ直前に配置 -->
   <script src="scripts.js"></script>
 </body>
 </html>
