@@ -1,0 +1,5 @@
+/* Licenseリンクを強調 */
+.top-links .license-link.active {
+  color:#ffd700;
+  font-weight:bold;
+}
