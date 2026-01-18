@@ -1,4 +1,3 @@
-// 言語データ
 const LANG = {
   jp: {
     title: "Premium Fly",
@@ -62,69 +61,44 @@ const LANG = {
   }
 };
 
-// 初期値取得
 let currentLang = localStorage.getItem("lang") || "jp";
 let currentTheme = localStorage.getItem("theme") || "light";
 
-// テーマ適用
 function applyTheme(theme){
   document.body.className = theme;
   document.querySelector("header").className = theme;
   localStorage.setItem("theme", theme);
 }
 
-// テーマ切替
 function toggleTheme(){
   currentTheme = currentTheme === "light" ? "dark" : "light";
   applyTheme(currentTheme);
 }
 
-// 言語適用
 function applyLang(lang){
   const data = LANG[lang];
-  // ヘッダー
   document.getElementById("title").textContent = data.title;
   document.getElementById("subtitle").textContent = data.subtitle;
-
-  // ダウンロード
   document.getElementById("download-title").textContent = data.download.title;
   document.getElementById("download-version").innerHTML = data.download.version + "<strong>1.0-SNAPSHOT</strong>";
   document.getElementById("download-btn").textContent = data.download.btn;
 
-  // 機能リスト
   const featList = document.getElementById("features-list");
   featList.innerHTML = "";
-  data.features.forEach(f => {
-    const li = document.createElement("li");
-    li.textContent = f;
-    featList.appendChild(li);
-  });
+  data.features.forEach(f => { let li=document.createElement("li"); li.textContent=f; featList.appendChild(li); });
 
-  // 更新情報
   const changeList = document.getElementById("changelog-list");
   changeList.innerHTML = "";
-  data.changelog.forEach(c => {
-    const li = document.createElement("li");
-    li.innerHTML = c;
-    changeList.appendChild(li);
-  });
+  data.changelog.forEach(c => { let li=document.createElement("li"); li.innerHTML=c; changeList.appendChild(li); });
 
-  // セレクトボックス同期
   document.getElementById("select-lang").value = lang;
-
-  // localStorage 保存
   localStorage.setItem("lang", lang);
   currentLang = lang;
 }
 
-// セレクトボックス変更時
-document.getElementById("select-lang").addEventListener("change", (e)=>{
-  applyLang(e.target.value);
-});
+document.getElementById("select-lang").addEventListener("change",(e)=>applyLang(e.target.value));
+document.getElementById("toggle-theme").addEventListener("click",toggleTheme);
 
-// ダーク/ライトボタン
-document.getElementById("toggle-theme").addEventListener("click", toggleTheme);
-
-// 初期設定
+// 初期適用
 applyTheme(currentTheme);
 applyLang(currentLang);
