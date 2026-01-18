@@ -3,35 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Fly - Minecraft プラグイン配布</title>
+  <title>Premium Fly - Minecraft Plugin</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Premium Fly</h1>
-    <p>サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン</p>
+    <h1 id="title">Premium Fly</h1>
+    <p id="subtitle">サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン</p>
+    <div class="controls">
+      <button id="toggle-theme">🌙 ダーク/ライト</button>
+      <button id="toggle-lang">EN/JP</button>
+    </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#download">ダウンロード</a></li>
-      <li><a href="#features">機能</a></li>
-      <li><a href="#changelog">更新情報</a></li>
+      <li><a href="#download" id="nav-download">ダウンロード</a></li>
+      <li><a href="#features" id="nav-features">機能</a></li>
+      <li><a href="#changelog" id="nav-changelog">更新情報</a></li>
     </ul>
   </nav>
 
   <main>
     <!-- ダウンロード -->
     <section id="download">
-      <h2>ダウンロード</h2>
-      <p>最新版: <strong>1.0-SNAPSHOT</strong></p>
-      <a href="downloads/PremiumFly-1.0.jar" class="btn" download>ダウンロード</a>
+      <h2 id="download-title">ダウンロード</h2>
+      <p id="download-version">最新版: <strong>1.0-SNAPSHOT</strong></p>
+      <a href="downloads/PremiumFly-1.0.jar" class="btn" download id="download-btn">ダウンロード</a>
     </section>
 
     <!-- 機能紹介 -->
     <section id="features">
-      <h2>機能</h2>
-      <ul>
+      <h2 id="features-title">機能</h2>
+      <ul id="features-list">
         <li>/pfly @player enable/disable で飛行権限を管理</li>
         <li>特定のタグを持つプレイヤーのみ使用可能</li>
         <li>サバイバル・アドベンチャーでも飛行可能</li>
@@ -41,16 +45,15 @@
 
     <!-- 更新情報 -->
     <section id="changelog">
-      <h2>更新情報</h2>
-      <ul>
+      <h2 id="changelog-title">更新情報</h2>
+      <ul id="changelog-list">
         <li><strong>1.0-SNAPSHOT:</strong> 初回リリース、基本機能実装</li>
-        <!-- 将来の更新はこちらに追加 -->
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Takkunlego0916 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub リポジトリ</a></p>
+    <p>© 2026 Takkunlego0916 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub</a></p>
   </footer>
 
   <script src="scripts.js"></script>
