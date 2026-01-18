@@ -3,8 +3,7 @@ const LANG = {
   jp: {
     title: "Premium Fly",
     subtitle: "サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン",
-    nav: { download:"ダウンロード", features:"機能", changelog:"更新情報" },
-    download: { version:"最新版: ", btn:"ダウンロード" },
+    download: { title:"ダウンロード", version:"最新版: ", btn:"ダウンロード" },
     features: [
       "/pfly @player enable/disable で飛行権限を管理",
       "特定のタグを持つプレイヤーのみ使用可能",
@@ -16,8 +15,7 @@ const LANG = {
   en: {
     title: "Premium Fly",
     subtitle: "Fly like in Creative in Survival/Adventure mode",
-    nav: { download:"Download", features:"Features", changelog:"Changelog" },
-    download: { version:"Latest: ", btn:"Download" },
+    download: { title:"Download", version:"Latest: ", btn:"Download" },
     features: [
       "/pfly @player enable/disable to manage fly permissions",
       "Only players with specific tags can use",
@@ -29,17 +27,16 @@ const LANG = {
 };
 
 let currentLang = localStorage.getItem("lang") || "jp";
-let currentTheme = localStorage.getItem("theme") || "dark";
+let currentTheme = localStorage.getItem("theme") || "light";
 
 function applyTheme(theme){
   document.body.className = theme;
   document.querySelector("header").className = theme;
-  document.querySelector("nav").className = theme;
   localStorage.setItem("theme", theme);
 }
 
 function toggleTheme(){
-  currentTheme = currentTheme === "dark" ? "light" : "dark";
+  currentTheme = currentTheme === "light" ? "dark" : "light";
   applyTheme(currentTheme);
 }
 
@@ -47,9 +44,7 @@ function applyLang(lang){
   const data = LANG[lang];
   document.getElementById("title").textContent = data.title;
   document.getElementById("subtitle").textContent = data.subtitle;
-  document.getElementById("nav-download").textContent = data.nav.download;
-  document.getElementById("nav-features").textContent = data.nav.features;
-  document.getElementById("nav-changelog").textContent = data.nav.changelog;
+  document.getElementById("download-title").textContent = data.download.title;
   document.getElementById("download-version").innerHTML = data.download.version + "<strong>1.0-SNAPSHOT</strong>";
   document.getElementById("download-btn").textContent = data.download.btn;
 
