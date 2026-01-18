@@ -1,29 +1,139 @@
 /* リセット */
-* { margin:0; padding:0; box-sizing:border-box; font-family:"Noto Sans JP",sans-serif; }
-body { line-height:1.6; transition: background 0.3s, color 0.3s; }
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Noto Sans JP",sans-serif;
+}
 
-/* ライトモード初期 */
-body.light { background:#fdfdfd; color:#222; }
-body.dark { background:#1b1b1b; color:#f0f0f0; }
+body {
+  line-height:1.6;
+  transition: background 0.3s, color 0.3s;
+}
 
-header { text-align:center; padding:50px 20px; transition: background 0.3s, color 0.3s; }
-header.light { background:#fff; color:#222; }
-header.dark { background:#4b00ff; color:#fff; }
+/* ライトモード */
+body.light {
+  background-color: #fdfdfd; /* 背景追加 */
+  color: #222;
+}
 
-header h1 { font-size:3em; margin-bottom:10px; }
-header p { font-size:1.2em; margin-bottom:20px; color:inherit; }
-.controls { margin-top:10px; }
-.controls button { margin:0 5px; padding:8px 15px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; background:#eee; color:#222; }
-body.dark .controls button { background:#333; color:#fff; }
+/* ダークモード */
+body.dark {
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+}
 
-main { max-width:800px; margin:40px auto; padding:0 20px; }
-section { margin-bottom:50px; }
-section h2 { font-size:2em; margin-bottom:15px; border-bottom:2px solid #4b00ff; display:inline-block; padding-bottom:5px; }
-ul { list-style:disc inside; padding-left:0; }
-.btn { display:inline-block; background:#4b00ff; color:#fff; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s; }
-.btn:hover { background:#6a33ff; }
+/* ヘッダー */
+header {
+  text-align:center;
+  padding:50px 20px;
+  transition: background 0.3s, color 0.3s;
+}
 
-footer { text-align:center; padding:20px; background:#fafafa; color:#555; }
-body.dark footer { background:#222; color:#aaa; }
-footer a { color:#4b00ff; text-decoration:none; }
-footer a:hover { text-decoration:underline; }
+header.light {
+  background-color: #ffffff; /* 背景追加 */
+  color: #222;
+}
+
+header.dark {
+  background-color: #4b00ff;
+  color: #fff;
+}
+
+header h1 {
+  font-size:3em;
+  margin-bottom:10px;
+}
+
+header p {
+  font-size:1.2em;
+  margin-bottom:20px;
+  color:inherit;
+}
+
+.controls {
+  margin-top:10px;
+}
+
+.controls button,
+.controls select {
+  margin:0 5px;
+  padding:8px 15px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+body.light .controls button,
+body.light .controls select {
+  background:#eee;
+  color:#222;
+}
+
+body.dark .controls button,
+body.dark .controls select {
+  background:#333;
+  color:#fff;
+}
+
+/* メイン */
+main {
+  max-width:800px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+section {
+  margin-bottom:50px;
+}
+
+section h2 {
+  font-size:2em;
+  margin-bottom:15px;
+  border-bottom:2px solid #4b00ff;
+  display:inline-block;
+  padding-bottom:5px;
+}
+
+ul {
+  list-style:disc inside;
+  padding-left:0;
+}
+
+.btn {
+  display:inline-block;
+  background:#4b00ff;
+  color:#fff;
+  padding:12px 25px;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#6a33ff;
+}
+
+/* フッター */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#fafafa;
+  color:#555;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark footer {
+  background:#222;
+  color:#aaa;
+}
+
+footer a {
+  color:#4b00ff;
+  text-decoration:none;
+}
+
+footer a:hover {
+  text-decoration:underline;
+}
