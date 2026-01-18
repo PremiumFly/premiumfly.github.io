@@ -41,12 +41,23 @@ header .banner img {
   display:flex;
   align-items:center;
   justify-content:space-between; /* 左 / 中央 / 右 */
-  padding:5px 10px;
+  padding:5px 15px;
   border-radius:5px;
   margin-bottom:10px;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明ダークで文字を目立たせる */
+  backdrop-filter: blur(5px); /* 背景を少しぼかす */
 }
-header.dark .top-links { background-color: rgba(0,0,0,0.2); }
+
+/* ライトモードでも文字が見えるように調整 */
+header.light .top-links {
+  background-color: rgba(255, 255, 255, 0.4); /* 半透明白 */
+  color: #222; /* 文字を黒に */
+}
+
+header.dark .top-links {
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明黒 */
+  color: #fff; /* 文字白 */
+}
 
 /* 左：サイトロゴ */
 .top-links .site-logo {
@@ -54,8 +65,8 @@ header.dark .top-links { background-color: rgba(0,0,0,0.2); }
   align-items:center;
   gap:5px;
   font-weight:bold;
-  color:#fff;
   text-decoration:none;
+  color: inherit; /* 親の色を使う */
 }
 .top-links .site-logo .icon { width:20px; height:20px; }
 
@@ -65,21 +76,21 @@ header.dark .top-links { background-color: rgba(0,0,0,0.2); }
   gap:15px;
 }
 .top-links .center-links a {
-  color:#fff;
   text-decoration:none;
   font-weight:bold;
+  color: inherit; /* 親の色 */
   transition:0.3s;
 }
-.top-links .center-links a:hover { color:#ffd700; }
+.top-links .center-links a:hover { color:#4b00ff; }
 
 /* 右：License */
 .top-links .license-link {
-  color:#fff;
   text-decoration:none;
   font-weight:bold;
+  color: inherit; /* 親の色 */
   transition:0.3s;
 }
-.top-links .license-link:hover { color:#ffd700; }
+.top-links .license-link:hover { color:#4b00ff; }
 
 /* タイトルとサブタイトル */
 header h1 { font-size:3em; margin:10px 0; }
