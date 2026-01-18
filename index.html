@@ -2,32 +2,57 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Premium Fly プラグイン配布サイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Fly - Minecraft プラグイン配布</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Premium Fly</h1>
-    <p>サバイバルでもクリエイティブのように飛べるプラグイン</p>
+    <p>サバイバルやアドベンチャーでもクリエイティブのように飛べるプラグイン</p>
   </header>
 
-  <section id="download">
-    <h2>ダウンロード</h2>
-    <p>最新版: 1.0-SNAPSHOT</p>
-    <a href="downloads/PremiumFly-1.0.jar" download>ダウンロード</a>
-  </section>
-
-  <section id="features">
-    <h2>機能</h2>
+  <nav>
     <ul>
-      <li>/pfly @player enable/disable コマンドで飛行権限を管理可能</li>
-      <li>特定のタグを持つプレイヤーのみ使用可能</li>
-      <li>サバイバルやアドベンチャーでも飛行可能</li>
+      <li><a href="#download">ダウンロード</a></li>
+      <li><a href="#features">機能</a></li>
+      <li><a href="#changelog">更新情報</a></li>
     </ul>
-  </section>
+  </nav>
+
+  <main>
+    <!-- ダウンロード -->
+    <section id="download">
+      <h2>ダウンロード</h2>
+      <p>最新版: <strong>1.0-SNAPSHOT</strong></p>
+      <a href="downloads/PremiumFly-1.0.jar" class="btn" download>ダウンロード</a>
+    </section>
+
+    <!-- 機能紹介 -->
+    <section id="features">
+      <h2>機能</h2>
+      <ul>
+        <li>/pfly @player enable/disable で飛行権限を管理</li>
+        <li>特定のタグを持つプレイヤーのみ使用可能</li>
+        <li>サバイバル・アドベンチャーでも飛行可能</li>
+        <li>軽量・サーバーに負荷が少ない</li>
+      </ul>
+    </section>
+
+    <!-- 更新情報 -->
+    <section id="changelog">
+      <h2>更新情報</h2>
+      <ul>
+        <li><strong>1.0-SNAPSHOT:</strong> 初回リリース、基本機能実装</li>
+        <!-- 将来の更新はこちらに追加 -->
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 金田匠</p>
+    <p>© 2026 Takkunlego0916 | <a href="https://github.com/Takkunlego0916/PremiumFly" target="_blank">GitHub リポジトリ</a></p>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
