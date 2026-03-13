@@ -9,7 +9,7 @@ const LANG = {
       "サバイバル・アドベンチャーでも飛行可能",
       "軽量・サーバーに負荷が少ない"
     ],
-    changelog: ["1.0-SNAPSHOT: 初回リリース、基本機能実装"]
+    changelog: ["1.1.0: 中規模アップデート、微調整、多数のバグ修正"]
   },
   en: {
     title: "Premium Fly",
@@ -21,7 +21,7 @@ const LANG = {
       "Fly in Survival/Adventure mode",
       "Lightweight, low server impact"
     ],
-    changelog: ["1.0-SNAPSHOT: Initial release, basic features implemented"]
+    changelog: ["1.1.0: Moderate update, minor adjustments, numerous bug fixes"]
   },
   "zh-cn": {
     title: "Premium Fly",
@@ -33,7 +33,7 @@ const LANG = {
       "可在生存/冒险模式飞行",
       "轻量，服务器负载低"
     ],
-    changelog: ["1.0-SNAPSHOT: 初始版本，基本功能实现"]
+    changelog: ["1.1.0: 中等规模的更新、微调及大量错误修复"]
   },
   "zh-tw": {
     title: "Premium Fly",
@@ -45,7 +45,7 @@ const LANG = {
       "可在生存/冒險模式飛行",
       "輕量，伺服器負載低"
     ],
-    changelog: ["1.0-SNAPSHOT: 初始版本，基本功能實現"]
+    changelog: ["1.1.0: 中等規模的更新、微調及大量錯誤修正"]
   },
   ko: {
     title: "Premium Fly",
@@ -57,7 +57,7 @@ const LANG = {
       "서바이벌/어드벤처 모드에서 비행 가능",
       "가벼움, 서버 부하 적음"
     ],
-    changelog: ["1.0-SNAPSHOT: 초기 릴리스, 기본 기능 구현"]
+    changelog: ["1.1.0: 중규모 업데이트, 미세 조정, 다수의 버그 수정"]
   }
 };
 
