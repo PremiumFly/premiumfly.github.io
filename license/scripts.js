@@ -26,18 +26,15 @@ Permission is hereby granted, free of charge, ...`,
 무료 사용을 허가합니다...`
 };
 
-// ページにライセンス反映
 function applyLicenseLang(lang){
   const pre = document.getElementById("license-text");
   if(pre) pre.textContent = LICENSE_TEXT[lang];
 }
 
-// 言語切替時に呼び出す
 document.getElementById("select-lang").addEventListener("change",(e)=>{
   const lang = e.target.value;
   applyLang(lang);
   applyLicenseLang(lang);
 });
 
-// 初期適用
 applyLicenseLang(currentLang);
