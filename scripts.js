@@ -99,6 +99,5 @@ function applyLang(lang){
 document.getElementById("select-lang").addEventListener("change",(e)=>applyLang(e.target.value));
 document.getElementById("toggle-theme").addEventListener("click",toggleTheme);
 
-// 初期適用
 applyTheme(currentTheme);
 applyLang(currentLang);
